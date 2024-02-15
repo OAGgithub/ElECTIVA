@@ -16,6 +16,4 @@ jobs:
       - name: Build and Deploy
         run: |
           npm install --global surge
-          surge token dfbdc058f6c06618adc4238f541e53b8 
-
-          surge --project ./ --domain https://Oniel-Parcial1.surge.sh
+          - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
